@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleNest | Online Clothing Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="clothing/index.html">Clothing Store</a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#products" class="cart-link">
+                🛍️ Cart (<span id="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">YOUR STYLE, YOUR STORY</p>
+
+            <h1>Discover Your<br>Perfect Style.</h1>
+
+            <p>
+                Explore fashionable clothing, beautiful designs,
+                and everyday essentials made for your style.
+            </p>
+
+            <a href="#products" class="btn">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop By Category</h2>
+
+        <div class="category-container">
+            <a href="#products" class="category-card">Men's Wear</a>
+            <a href="#products" class="category-card">Women's Wear</a>
+            <a href="#products" class="category-card">Shoes</a>
+            <a href="#products" class="category-card">Accessories</a>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <h2>Our Popular Products</h2>
+
+        <p class="section-text">
+            Find something you will love to wear.
+        </p>
+
+        <div class="product-container">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+                    alt="Classic casual T-shirt">
+
+                <div class="product-info">
+                    <h3>Classic T-Shirt</h3>
+                    <p>Comfortable everyday wear.</p>
+
+                    <div class="product-bottom">
+                        <span>₦8,000</span>
+                        <button onclick="addToCart('Classic T-Shirt', 8000)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80"
+                    alt="Blue denim jeans">
+
+                <div class="product-info">
+                    <h3>Denim Jeans</h3>
+                    <p>Classic jeans for everyday outfits.</p>
+
+                    <div class="product-bottom">
+                        <span>₦15,000</span>
+                        <button onclick="addToCart('Denim Jeans', 15000)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                    alt="Red casual sneakers">
+
+                <div class="product-info">
+                    <h3>Casual Sneakers</h3>
+                    <p>Comfortable shoes for daily activities.</p>
+
+                    <div class="product-bottom">
+                        <span>₦25,000</span>
+                        <button onclick="addToCart('Casual Sneakers', 25000)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About StyleNest</h2>
+
+        <p>
+            StyleNest makes it easy to discover clothing and accessories
+            for different occasions. Explore our collection and find
+            your next favourite outfit.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Need Help With Your Order?</h2>
+
+        <p>Contact us for questions about our products.</p>
+
+        <a href="StyleNest@gmail.com" class="btn">
+            Contact Us
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 StyleNest. All rights reserved.</p>
+        <p>Sample clothing store website created by GT Web Designs.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
