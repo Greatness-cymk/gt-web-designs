@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17132f">
+    <meta name="description" content="Welcome to The Fun Zone! Play mini-games, test your knowledge with quizzes, and solve fun riddles.">
+
+    <title>The Fun Zone | Play, Think, Have Fun!</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            The Fun Zone
+        </a>
+
+        <nav class="navigation">
+            <a href="#games">Mini-Games</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#riddles">Riddles</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">✨ YOUR HAPPY PLACE</span>
+                <h1>Ready, Set,<br><span>Have Fun!</span></h1>
+                <p>
+                    Take a break, challenge your brain, play a game,
+                    and discover how much fun learning can be!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#games" class="button button-primary">
+                        Let's Play! 🎮
+                    </a>
+                    <a href="#quiz" class="button button-outline">
+                        Test Your Brain 🧠
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div><strong>🎮</strong><span>Mini-Games</span></div>
+                    <div><strong>🧠</strong><span>Brain Power</span></div>
+                    <div><strong>🎉</strong><span>Good Vibes</span></div>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-circle circle-one"></div>
+                <div class="art-circle circle-two"></div>
+                <div class="floating-card card-star">⭐</div>
+                <div class="floating-card card-game">🎮</div>
+                <div class="floating-card card-brain">🧠</div>
+                <div class="main-emoji">🚀</div>
+                <div class="art-caption">LET THE FUN BEGIN!</div>
+            </div>
+        </section>
+
+        <section class="section" id="games">
+            <div class="section-heading">
+                <span class="eyebrow">PICK YOUR CHALLENGE</span>
+                <h2>Let's Play Some Games!</h2>
+                <p>Choose a game and see what you can do.</p>
+            </div>
+
+            <div class="game-layout">
+                <article class="panel game-panel">
+                    <div class="panel-icon purple-icon">⭕</div>
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>Can you get three in a row? Play against a friend on the same device.</p>
+
+                    <div class="game-status" id="gameStatus" aria-live="polite">
+                        Player X's turn
+                    </div>
+
+                    <div class="tic-tac-toe" id="ticTacToe" aria-label="Tic-Tac-Toe board">
+                        <button class="cell" data-cell="0" aria-label="Cell 1"></button>
+                        <button class="cell" data-cell="1" aria-label="Cell 2"></button>
+                        <button class="cell" data-cell="2" aria-label="Cell 3"></button>
+                        <button class="cell" data-cell="3" aria-label="Cell 4"></button>
+                        <button class="cell" data-cell="4" aria-label="Cell 5"></button>
+                        <button class="cell" data-cell="5" aria-label="Cell 6"></button>
+                        <button class="cell" data-cell="6" aria-label="Cell 7"></button>
+                        <button class="cell" data-cell="7" aria-label="Cell 8"></button>
+                        <button class="cell" data-cell="8" aria-label="Cell 9"></button>
+                    </div>
+
+                    <button class="button button-primary full-button" id="resetGame">
+                        Restart Game
+                    </button>
+                </article>
+
+                <article class="panel game-panel">
+                    <div class="panel-icon pink-icon">⚡</div>
+                    <h3>Number Challenge</h3>
+                    <p>Guess the secret number between 1 and 20. Can you find it?</p>
+
+                    <div class="number-display">🔢 <span>1 – 20</span></div>
+
+                    <form id="numberForm" class="number-form">
+                        <label for="numberGuess">Your guess</label>
+                        <input
+                            type="number"
+                            id="numberGuess"
+                            min="1"
+                            max="20"
+                            placeholder="Enter a number"
+                            required
+                        >
+                        <button class="button button-primary full-button" type="submit">
+                            Check My Guess
+                        </button>
+                    </form>
+
+                    <p class="feedback" id="numberFeedback" aria-live="polite">
+                        Make your first guess!
+                    </p>
+                    <button class="text-button" id="newNumberGame">
+                        Start a new round ↻
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="section quiz-section" id="quiz">
+            <div class="section-heading">
+                <span class="eyebrow">TIME TO THINK</span>
+                <h2>Quick Brain Quiz 🧠</h2>
+                <p>Answer the questions and see your score.</p>
+            </div>
+
+            <article class="panel quiz-panel">
+                <div class="quiz-top">
+                    <span id="quizProgress">Question 1 of 5</span>
+                    <span class="score-pill">Score: <strong id="quizScore">0</strong></span>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-bar" id="quizProgressBar"></div>
+                </div>
+
+                <h3 id="quizQuestion">Loading your first question...</h3>
+
+                <div class="quiz-options" id="quizOptions"></div>
+
+                <p id="quizFeedback" class="feedback" aria-live="polite"></p>
+
+                <button class="button button-primary" id="nextQuestion" disabled>
+                    Next Question →
+                </button>
+            </article>
+        </section>
+
+        <section class="section riddles-section" id="riddles">
+            <div class="section-heading">
+                <span class="eyebrow">THINK OUTSIDE THE BOX</span>
+                <h2>Can You Solve This Riddle? 🤔</h2>
+                <p>Read the clue, think carefully, and reveal the answer.</p>
+            </div>
+
+            <article class="riddle-card">
+                <div class="riddle-emoji">💡</div>
+                <span class="riddle-number" id="riddleNumber">RIDDLE 1</span>
+                <h3 id="riddleQuestion">What has keys but cannot open locks?</h3>
+
+                <button class="button button-light" id="revealRiddle">
+                    Reveal Answer 👀
+                </button>
+
+                <p class="riddle-answer" id="riddleAnswer" hidden>
+                    A piano! 🎹
+                </p>
+
+                <button class="text-button riddle-next" id="nextRiddle">
+                    Try another riddle ↻
+                </button>
+            </article>
+        </section>
+
+        <section class="final-cta">
+            <span>🎉</span>
+            <h2>Having Fun Yet?</h2>
+            <p>There's always another challenge waiting for you!</p>
+            <a href="#games" class="button button-light">Play Again ↑</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="#top" class="footer-logo">✦ The Fun Zone</a>
+        <p>Made with 💜 for curious minds and happy hearts.</p>
+        <p class="copyright">
+            &copy; <span id="currentYear"></span> The Fun Zone.
+            A GT Web Designs portfolio project.
+        </p>
+        <a href="../index.html" class="back-link">← Back to GT Web Designs</a>
+    </footer>
+
+</body>
+</html>
